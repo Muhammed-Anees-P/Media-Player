@@ -1,8 +1,10 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const navigateByUrl = useNavigate()
   return (
     <>
       <Row className="d-flex justify-content-evenly align-items-center w-100">
@@ -19,7 +21,7 @@ function LandingPage() {
             fingertips. Explore, play, and immerse yourself in a world of
             endless multimedia enjoyment!
           </p>
-          <button className="btn btn-warning text-white">
+          <button onClick={()=>navigateByUrl('/home')} className="btn btn-warning text-white">
             Get Started{" "}
             <i class="fa-duotone fa-solid fa-right-to-bracket ms-2"></i>
           </button>
